@@ -80,3 +80,57 @@
     font-size: 0.9rem;
     margin-top: 40px;
   }
+
+  .description {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.4s ease;
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 8px;
+  }
+  
+  /* 表示状態のとき */
+  .menu-item.active .description {
+    max-height: 100px;
+    opacity: 1;
+  }
+
+  body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    padding: 0 16px;
+    overflow-x: hidden;
+    background: linear-gradient(to bottom right, #abd6f9c8, #d7e1d2);
+    position: relative;
+  }
+  
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    pointer-events: none;
+    background:
+      repeating-linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.12),
+        rgba(255, 255, 255, 0.12) 15px,
+        transparent 6px,
+        transparent 24px
+      );
+    filter: blur(1px);
+  
+    z-index: -1;
+  }
+  
+  @keyframes stripeFlow {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 60px 60px;
+    }
+  }
+  
+  
