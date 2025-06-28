@@ -1,0 +1,82 @@
+/* 全体の初期設定 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff8f0;
+    color: #333;
+    overflow-x: hidden;
+    padding: 0 16px;
+  }
+  
+  /* ヘッダー */
+  header {
+    text-align: center;
+    padding: 24px 0;
+    background-color: #82d0b2;
+  }
+  
+  header h1 {
+    font-size: 1.8rem;
+  }
+  
+  /* メニューアイテム全体 */
+  .menu {
+    margin-top: 24px;
+  }
+  
+  .menu-item {
+    margin: 40px 0;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+    text-align: center;
+  }
+  
+  /* 左右方向の初期位置 */
+  .menu-item.left {
+    transform: translateX(-50px);
+  }
+  
+  .menu-item.right {
+    transform: translateX(50px);
+  }
+  
+  /* アニメーション用の表示状態 */
+  .menu-item.show {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+  
+  /* 画像 */
+  .menu-item img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  /* 商品名と価格 */
+  .menu-item h2 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  
+  .menu-item p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* フッター */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #82d0b2;
+    font-size: 0.9rem;
+    margin-top: 40px;
+  }
