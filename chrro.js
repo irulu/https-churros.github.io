@@ -14,4 +14,12 @@ window.addEventListener('scroll', () => {
     });
   });
 
+  // 画像をクリックしたら説明を表示/非表示
+document.querySelectorAll('.menu-item img').forEach(img => {
+  img.addEventListener('click', () => {
+    const item = img.closest('.menu-item');
+    item.classList.toggle('active');
+  });
+});
+
   
